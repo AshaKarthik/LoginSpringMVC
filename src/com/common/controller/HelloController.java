@@ -11,13 +11,14 @@ import org.springframework.web.servlet.ModelAndView;
 public class HelloController {
 
 	@RequestMapping("/welcome/{userName}/{countryName}")
-	public ModelAndView helloWorld(@PathVariable Map<String,String> pathVars){
-		String name=pathVars.get("userName");
-		String country=pathVars.get("countryName");
-		ModelAndView model=new ModelAndView("HelloPage");
-		model.addObject("welcomeMessage","Hi "+name+" You are from "+country);
+	public ModelAndView helloWorld(@PathVariable Map<String, String> pathVars) {
+		String name = pathVars.get("userName");
+		String country = pathVars.get("countryName");
+		ModelAndView model = new ModelAndView("HelloPage");
+		model.addObject("welcomeMessage", "Hi " + name + " You are from "
+				+ country);
 		return model;
-		
+
 	}
-	
+
 }
